@@ -1,0 +1,36 @@
+<html>
+<head>
+
+</head>
+<body>
+    <form method="post" action="">
+        Name
+        <input type="text" name="name">
+        status
+        <input type="text" name="status">
+        <button id="loginButton" type="submit">Save</button>
+    </form>
+
+    <h2>Existing Members:</h2>
+    <ul>        
+        {% for table in weiland %}
+            <p>ID: {{table.0}}</p>
+            <p>Name: {{table.2}}</p>
+            <p>Status: {{table.1}}</p>
+        {% endfor %}
+    </ul>
+</body>
+
+<script>
+    document.getElementById('loginButton').addEventListener("click", function(e) {
+        e.preventDefault();
+        // Grab fields
+        // document.getElementsByName .getAttr("val")
+        // Post to server
+        // fetch
+        // Send back token
+        // localstorage.set("token", token)
+    })
+</script>
+
+</html>
